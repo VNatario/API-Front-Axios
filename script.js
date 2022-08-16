@@ -48,9 +48,15 @@ const userUpdated = {
   city: "Suzano",
 };
 
+const deleteUser = (id) => {
+  axios
+    .delete(`${url}/${id}`)
+    .then((response) => console.log(response))
+    .catch((e) => console.error(e));
+};
+
 getUsers();
 // addNewUser(newUser);
-
-getUser(3);
-
+getUser(2);
 // updateUser(3, userUpdated);
+// deleteUser(3)
