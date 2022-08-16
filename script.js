@@ -35,7 +35,22 @@ const getUser = (id) => {
     .catch((e) => console.error(e));
 };
 
+const updateUser = (id, dataUpdate) => {
+  axios
+    .put(`${url}/${id}`, dataUpdate)
+    .then((response) => console.log(response))
+    .catch((e) => console.error(e));
+};
+
+const userUpdated = {
+  name: "Sara Anita",
+  avatar: "https://avatars.githubusercontent.com/u/105318276?v=4",
+  city: "Suzano",
+};
+
 getUsers();
 // addNewUser(newUser);
 
-getUser(2);
+getUser(3);
+
+// updateUser(3, userUpdated);
